@@ -1,0 +1,5 @@
+{
+  "name": "Habit Tracker",
+  "description": "A comprehensive personal planner with day, week, and month views, integrated habit tracking with positive/negative reinforcement, streak systems, and customizable themes.",
+  "requestFramePermissions": []
+}
