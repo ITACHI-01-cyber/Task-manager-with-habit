@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # Habit Tracker & Personal Planner
 
 A comprehensive personal planner and habit tracker by mrvbfit, built with a modern tech stack. This application features day, week, and month views, integrated habit tracking with streaks, customizable themes, and offline support, all synced to a MongoDB database and deployed seamlessly on Vercel.
@@ -102,27 +98,6 @@ Follow these instructions to get a copy of the project up and running on your lo
     npm run dev
     ```
     Open http://localhost:3000 to view it in your browser.
-
-## 🌐 Deployment to Vercel
-
-This project is configured for a seamless deployment to Vercel.
-
-1.  **Push to GitHub:**
-    Ensure your latest code, including the `vercel.json` file, is pushed to your GitHub repository.
-
-2.  **Import Project on Vercel:**
-    - Log in to your Vercel account.
-    - Click **Add New...** > **Project**.
-    - Import your GitHub repository. Vercel will automatically detect it as a Vite project.
-
-3.  **Configure Environment Variables:**
-    - Before deploying, navigate to the **Settings** tab of your new Vercel project.
-    - Go to the **Environment Variables** section.
-    - Add the same `MONGODB_URI` and `GEMINI_API_KEY` that you used in your `.env.local` file.
-
-4.  **Deploy:**
-    - Navigate back to the **Deployments** tab and trigger a new deployment.
-    - Vercel will build the frontend, deploy the Express API as a serverless function, and your site will be live!
 
 ## 📜 License
 
