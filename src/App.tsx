@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GoogleGenAI } from "@google/genai";
 import { 
   Calendar as CalendarIcon, 
@@ -57,6 +57,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Habit, Task, Badge, AppTheme, AppData, HabitType } from './types';
 import { DEFAULT_THEMES, BADGES } from './constants';
@@ -267,7 +268,7 @@ export default function App() {
   };
 
   const addTask = (task: Omit<Task, 'id'>) => {
-    const newTask = { ...task, id: Math.random().toString(36).substr(2, 9) };
+    const newTask = { ...task, id: uuidv4() };
     setTasks([...tasks, newTask]);
     setIsModalOpen(false);
   };
@@ -275,7 +276,7 @@ export default function App() {
   const addHabit = (habit: Omit<Habit, 'id' | 'streak' | 'history' | 'createdAt'>) => {
     const newHabit: Habit = {
       ...habit,
-      id: Math.random().toString(36).substr(2, 9),
+      id: uuidv4(),
       streak: 0,
       history: {},
       createdAt: new Date().toISOString()
